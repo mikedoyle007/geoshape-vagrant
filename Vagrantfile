@@ -8,10 +8,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
 
   ## create a private network visible only to the host machine
-  config.vm.network :private_network, ip: "192.168.99.110"
+  config.vm.network :private_network, ip: "192.168.10.221"
 
   ## assign a static ip visible to others on the network.
-  # config.vm.network :public_network, :bridge => 'en0: Wi-Fi (AirPort)', ip: "192.168.10.222", netmask: "255.255.255.0"
+  #config.vm.network :public_network, :bridge => 'en0: Wi-Fi (AirPort)', ip: "192.168.10.221", netmask: "255.255.255.0"
 
 
   # Example of share an additional folder to the guest VM.
@@ -22,3 +22,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     vb.customize ["modifyvm", :id, "--memory", "4096", "--cpus", "2"]
   end
 end
+
+#vagrant commands to run - changed to different IP for local dev due to conflicts
+#vagrant up
+#vagrant ssh
+#sudo geoshape-config init 192.168.10.221
