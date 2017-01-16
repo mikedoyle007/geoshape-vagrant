@@ -1,10 +1,10 @@
 ```bash
 vagrant up
 vagrant ssh
-sudo geoshape-config init 192.168.99.110
+sudo geoshape-config init 192.168.10.221
 ```
 
-The vm will be configured and accessible in a browser at the following url: 192.168.99.110
+The vm will be configured and accessible in a browser at the following url: 192.168.10.221
 
 ```bash
 sudo geoshape-config
