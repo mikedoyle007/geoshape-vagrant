@@ -1,0 +1,13 @@
+{
+   "import": {
+      "targetWorkspace": {
+         "workspace": {
+            "name": "tasmania"
+         }
+      },
+      "data": {
+        "type": "directory",
+        "location": "C:/data/tasmania"
+      }
+   }
+}

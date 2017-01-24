@@ -1,0 +1,18 @@
+{
+   "import": {
+      "targetWorkspace": {
+         "workspace": {
+            "name": "geonode"
+         }
+      },
+      "data": {
+        "type": "file",
+        "file": "/home/aaime/devel/gisData/ndimensional/data/world/world.200407.3x5400x2700.tiff"
+      },
+      "targetStore": {
+         "dataStore": {
+            "name": "od3_repo"
+         }
+      }
+   }
+}
