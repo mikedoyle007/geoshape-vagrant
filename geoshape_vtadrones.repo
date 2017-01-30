@@ -2,7 +2,7 @@
 name=geoshape
 baseurl=https://github.com/vtadrones/geonode/archive/master.zip
 enabled=1
-gpgcheck=1
+gpgcheck=
 gpgkey=
 
 [pgdg95]
