@@ -1,18 +1,23 @@
 #!/usr/bin/env bash
-#@Author Jason Slaughter
-#Added missing repos and verified build on 1-16-2017
+
 # exit if anything returns failure
 set -e
 cd /etc/yum.repos.d/
 wget  https://yum.boundlessps.com/geoshape.repo
 mkdir -p /var/lib/geonode/rogue_geonode/geoshape
+mkdir -p /var/lib/geonode/lib/python2.7/site-packages/
 cd /var/lib/geonode/rogue_geonode/
-sudo wget https://github.com/vtadrones/geoshape-vagrant/archive/master.zip
+sudo wget https://github.com/vtadrones/rogue_geonode/archive/master.zip -O geoshape.zip
+sudo wget https://github.com/vtadrones/geonode/archive/master.zip -O geonode.zip
 sudo yum -y install unzip
-sudo unzip master.zip
-sudo cp -r geoshape-vagrant-master/ geoshape
+sudo unzip geoshape.zip
+sudo unzip geonode.zip
 wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm
 rpm -Uvh epel-release-latest-6.noarch.rpm
 rpm -Uvh http://yum.postgresql.org/9.6/redhat/rhel-6-x86_64/pgdg-centos96-9.6-3.noarch.rpm
 yum -y install geoshape geoshape-geoserver elasticsearch postgis-postgresql95 rabbitmq-server-3.6.1
-
+#Required path
+#geonode home - /var/lib/geonode/geonode
+#rogue_geonode - /var/lib/geonode/rogue_geonode
+sudo cp -r /var/lib/geonode/rogue_geonode/geonode-master/geonode /var/lib/geonode/
+sudo cp -r /var/lib/geonode/rogue_geonode/rogue_geonode-master/geoshape .
