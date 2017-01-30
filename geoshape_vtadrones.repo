@@ -1,6 +1,6 @@
 [geoshape]
 name=geoshape
-baseurl=https://github.com/vtadrones/rogue_geonode.git
+baseurl=https://github.com/vtadrones/geonode/archive/master.zip
 enabled=1
 gpgcheck=1
 gpgkey=
