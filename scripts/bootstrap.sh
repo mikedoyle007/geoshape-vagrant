@@ -9,7 +9,7 @@ wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm
 rpm -Uvh epel-release-latest-6.noarch.rpm
 rpm -Uvh http://yum.postgresql.org/9.6/redhat/rhel-6-x86_64/pgdg-centos96-9.6-3.noarch.rpm
 yum -y install geoshape geoshape-geoserver elasticsearch postgis-postgresql95 rabbitmq-server-3.6.1
-sudo geoshape-config init 192.168.10.221
+#sudo geoshape-config init 192.168.10.221
 #Required path
 #geonode home - /var/lib/geonode/geonode
 #rogue_geonode - /var/lib/geonode/rogue_geonode
