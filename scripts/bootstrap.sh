@@ -55,7 +55,8 @@ sudo mv geoserver.war /var/lib/tomcat8/webapps/
 #sandbox is stopped
 #saslauthd is stopped
 #echo "Started on http://192.168.10.221:8080/geoserver/web"
-echo "Default Username: admin"
-echo "Default: geoserver"
 sudo service --status-all
+echo "To complete the install execute the following two lines"
+echo "vagrant ssh"
+echo "sudo geoshape-config init 192.168.10.221"
 #echo "Verify Geonode URL"
