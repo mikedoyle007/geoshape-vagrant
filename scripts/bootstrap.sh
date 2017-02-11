@@ -21,3 +21,21 @@ yum -y install geoshape geoshape-geoserver elasticsearch postgis-postgresql95 ra
 #rogue_geonode - /var/lib/geonode/rogue_geonode
 sudo cp -r /var/lib/geonode/rogue_geonode/geonode-master/geonode /var/lib/geonode/
 sudo cp -r /var/lib/geonode/rogue_geonode/rogue_geonode-master/geoshape .
+wget -O geoserver.zip https://github.com/vtadrones/geoserver/archive/master.zip
+unzip geoserver.zip
+echo "Unzipped geoserver"
+#sudo service tomcat8 stop
+echo "tomcat stopped"
+cd geoserver-master/src/Production/
+sudo rm -rf /var/lib/tomcat8/webapps/geoserver
+echo "Removed old files"
+ls -la /var/lib/tomcat8/webapps/
+sudo mv geoserver.war /var/lib/tomcat8/webapps/
+echo "Added war"
+sudo service tomcat8 start
+echo "Install complete"
+service tomcat8 status
+cd /var/log/tomcat8/
+echo "Started on http://192.168.10.221:8080/geoserver/web"
+echo "Default Username: admin"
+echo "Default: geoserver"
